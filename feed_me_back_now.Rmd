@@ -1,0 +1,48 @@
+---
+title: "Feed me back now:"
+subtitle: "Tales of automated feedback in R and Python"
+author: "Mine Çetinkaya-Rundel & Tiffany Timbers"
+date: "2020/05/20 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+class: center, middle
+
+# Automated feedback in R Markdown
+
+Mine's demo
+
+---
+class: inverse, center, middle
+
+# Automated feedback in Jupyter
+
+Tiffany's demo
+
+---
+
+# Best practices for automated feedback
+
+- Measure twice, cut once (verify the correctness of your tests).
+
+- Use rounding & type coercion to write robust tests.
+
+- Use hashing to hide solutions for visible tests.
+
+- Test your tests on the students compute environment.
+
+- Abstract your tests to a script that is sourced/imported into the students literate code document.
+
+- Don't give automated feedback on everything.
+
+---
+
+# Resources
+
+- [nbgrader docs](https://nbgrader.readthedocs.io/en/stable/) (autograding in Jupyter notebooks)
