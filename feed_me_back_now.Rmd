@@ -16,14 +16,29 @@ class: center, middle
 
 # Automated feedback in R Markdown
 
-Mine's demo
+(Mine Çetinkaya-Rundel)
 
 ---
 class: inverse, center, middle
 
 # Automated feedback in Jupyter
+(Tiffany Timbers)
+---
 
-Tiffany's demo
+# What is Jupyter?
+
+---
+
+# Tests as automated feedback
+
+---
+
+# Autograding via nbgrader
+
+---
+class: inverse, center, middle
+
+# Demo!
 
 ---
 
