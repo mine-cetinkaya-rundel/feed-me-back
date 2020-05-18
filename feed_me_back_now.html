@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="author" content="Mine Çetinkaya-Rundel &amp; Tiffany Timbers" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="slides-style.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -13,9 +14,11 @@ class: center, middle, inverse, title-slide
 # Feed me back now:
 ## Tales of automated feedback <br> in R and Python
 ### Mine Çetinkaya-Rundel &amp; Tiffany Timbers
-### 2020/05/20 (updated: 2020-05-18) <br> TODO: INSERT LINK TO SLIDES
+### 2020/05/20 (updated: 2020-05-18) <br> .todo[INSERT LINK TO SLIDES]
 
 ---
+
+
 
 
 
@@ -24,66 +27,187 @@ class: center, middle, inverse, title-slide
 
 ## Outline
 
-[TODO: WE CAN REMOVE THIS SLIDE, ADDING FOR NOW TO KEEP TRACK]
+.todo[WE SHOULD EITHER REMOVE THIS SLIDE OR SIMPLIFY AND PRESENT IT WITH A BETTER VISUAL THAN A BULLETED LIST, LEAVING HERE NOW JUST SO WE CAN KEEP TRACK]
 
-- Automated feedback: what, why, and how?
-- Automated feedback in R:
-  - **learnr** tutorials, feedback with **gradethis**
-  - R Markdown documents, feedback with GitHub Actions
-- Automated feedback in Python
-  - ???
-- Closing thoughts
-  - Best practices
-  - Getting started
-  - Resources
+- Section: `# middle, inverse` Automated feedback: what, why, and how?
+  - Slides...
+- Section: `# middle, inverse` Automated feedback in R:
+  - Subsection: `## middle` **learnr** tutorials, feedback with **gradethis**
+    - Slides...
+  - Subsection: `## middle` R Markdown documents, feedback with GitHub Actions
+    - Slides...
+- Section: `# middle, inverse` Automated feedback in Python
+  - Subsection: ???
+- Section: `# middle, inverse` Closing thoughts
+  - Slide: Best practices
+  - Slide: Getting started
+  - Slide: Resources
 
 ---
 
 class: middle, inverse
 
-# Automated feedback: what, why, and how?
+# Automated feedback: 
+# why and how?
 
 ---
 
-class: center, middle
+## The why
 
-## Why automated feedback?
+.todo[There is probably better phrasing, keep thinking...]
+
+--
+.pull-left[
+.center[
+.huge[👉] &lt;br&gt;
+.large[**Nudging**] &lt;br&gt;
+students towards the right answer, especially in formative assessments
+]
+]
+--
+.pull-right[
+.center[
+.huge[➕] &lt;br&gt;
+.large[**Scaling**] &lt;br&gt;
+up efficiency of grading faster than (human) resources
+]
+]
 
 ---
 
-## Code checking
+.todo[fix two column formatting]
+
+
+
+.sample-question[
+Suppose 10 means from a simulated sampling distribution is stored in a vector called `means`.
+
+```r
+means
+```
+
+```
+##  [1] -1.21  0.28  1.08 -2.35  0.43  0.51 -0.57 -0.55 -0.56 -0.89
+```
+What is the value of the first mean?
+]
+--
+&lt;br&gt;
+.pull-left[
+.sample-answer[
+
+```r
+mean[1]
+```
+
+```
+## Error in mean[1]: object of type 'closure' is not subsettable
+```
+]
+]
+--
+.pull-right[
+&lt;img src="illustrations/student.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+
+---
+
+## Nudging
+
+.hand-blue[Not all feedback is useful, at least not for beginners...]
+
+&lt;br&gt;
+
+Providing helpful feedback can help them nudge them towards success:
 
 
 ```r
-x + 2
+mean[1]
+```
+
+.todo[Figure out why width isn't working below, want messages to be wrapped.]
+
+
+```
+## x `mean` is a function and a function doesn't have elements that can be subsetted with square brackets.
 ```
 
 ```
-## Error in eval(expr, envir, enclos): object 'x' not found
+## ℹ `means` is the vector of sample means calculated earlier.
 ```
 
 ---
 
-class: center, middle
+.sample-question[
+Visualise the relationship between city and highway mileage of cars from the `mpg` dataset, conditional on year of manufacture.
+]
 
-# Automated feedback in learnr
+--
+&lt;br&gt;
+.sample-answer[
+There is a strong, positive, linear relationship between the city and highway mileage of cars. Year does not seem to be related to either variable.
 
-(Mine Çetinkaya-Rundel)
+```r
+ggplot(mpg,aes(x = hwy, y = cty, fill=year)) +geom_point()+geom_smooth()
+```
+
+&lt;img src="feed_me_back_now_files/figure-html/unnamed-chunk-7-1.png" width="60%" /&gt;
+]
 
 ---
 
-class: center, middle
+class: middle
 
-# Automated feedback via GitHub Actions
-
-(Mine Çetinkaya-Rundel)
+.pull-left[
+.sample-feedback[
+- You mention a linear relationship, however your plot uses a loess fit to visualise the relationship between city and highway mileage. Also, the plot displays the uncertainty around the fit, but you haven't addressed it in your narrative.
+- Year should be mapped to the `color` aesthetic, not `fill`. 
+- Plot styling: Use informative axis labels, noting units of measurement. Also, give an informative title to your plot.
+- Code styling: Use consistent spacing around operators (e.g ` = `) and line breaks after `+` in each layer of your ggplot.
+]
+]
+.pull-right[
+&lt;img src="illustrations/teacher.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
 
 ---
 
-class: center, middle
 
-# Automated feedback in Jupyter
-(Tiffany Timbers)
+## Scaling
+
+.hand-blue[Our courses are growing, and that's a good thing, right?]
+
+--
+
+- Such a simple question, so much feedback to give!
+
+- Students turning in their work as R Markdown documents makes collecting submissions including code and narrative straightforward.
+
+- Providing feedback on both the code and narrative is not scalable unless (human) resources dedicated to your course grow proportionally with enrolments.
+
+---
+
+class: middle, inverse
+
+# Automated feedback in R
+
+---
+
+class: middle
+
+## learnr / gradethis
+
+---
+
+class: middle
+
+## R Markdown / GitHub Actions
+
+---
+
+class: middle, inverse
+
+# Automated feedback in Python
 
 ---
 
@@ -99,13 +223,13 @@ class: center, middle
 
 ---
 
-class: center, middle
+class: middle
 
-# Demo!
+## Demo!
 
 ---
 
-class: center, middle
+class: middle, inverse
 
 # Closing thoughts
 
@@ -136,7 +260,9 @@ class: center, middle
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
-"countIncrementalSlides": false
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div>"
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));

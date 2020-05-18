@@ -2,16 +2,24 @@
 title: "Feed me back now:"
 subtitle: "Tales of automated feedback <br> in R and Python"
 author: "Mine Çetinkaya-Rundel & Tiffany Timbers"
-date: "2020/05/20 (updated: `r Sys.Date()`) <br> TODO: INSERT LINK TO SLIDES"
+date: "2020/05/20 (updated: `r Sys.Date()`) <br> .todo[INSERT LINK TO SLIDES]"
 output:
   xaringan::moon_reader:
-    css: xaringan-themer.css
+    css: [xaringan-themer.css, slides-style.css]
     lib_dir: libs
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
 ---
+
+
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
@@ -30,65 +38,182 @@ style_duo_accent(
 
 ```{r load-packages, include=FALSE}
 library(tidyverse)
+library(usethis)
 ```
 
 ## Outline
 
-[TODO: WE CAN REMOVE THIS SLIDE, ADDING FOR NOW TO KEEP TRACK]
+.todo[WE SHOULD EITHER REMOVE THIS SLIDE OR SIMPLIFY AND PRESENT IT WITH A BETTER VISUAL THAN A BULLETED LIST, LEAVING HERE NOW JUST SO WE CAN KEEP TRACK]
 
-- Automated feedback: what, why, and how?
-- Automated feedback in R:
-  - **learnr** tutorials, feedback with **gradethis**
-  - R Markdown documents, feedback with GitHub Actions
-- Automated feedback in Python
-  - ???
-- Closing thoughts
-  - Best practices
-  - Getting started
-  - Resources
+- Section: `# middle, inverse` Automated feedback: what, why, and how?
+  - Slides...
+- Section: `# middle, inverse` Automated feedback in R:
+  - Subsection: `## middle` **learnr** tutorials, feedback with **gradethis**
+    - Slides...
+  - Subsection: `## middle` R Markdown documents, feedback with GitHub Actions
+    - Slides...
+- Section: `# middle, inverse` Automated feedback in Python
+  - Subsection: ???
+- Section: `# middle, inverse` Closing thoughts
+  - Slide: Best practices
+  - Slide: Getting started
+  - Slide: Resources
 
 ---
 
 class: middle, inverse
 
-# Automated feedback: what, why, and how?
+# Automated feedback: 
+# why and how?
 
 ---
 
-class: center, middle
+## The why
 
-## Why automated feedback?
+.todo[There is probably better phrasing, keep thinking...]
+
+--
+.pull-left[
+.center[
+.huge[`r emo::ji("point_right")`] <br>
+.large[**Nudging**] <br>
+students towards the right answer, especially in formative assessments
+]
+]
+--
+.pull-right[
+.center[
+.huge[`r emo::ji("heavy_plus_sign")`] <br>
+.large[**Scaling**] <br>
+up efficiency of grading faster than (human) resources
+]
+]
 
 ---
 
-## Code checking
+.todo[fix two column formatting]
 
-```{r error = TRUE}
-x + 2
+```{r include=FALSE}
+set.seed(1234)
+means <- rnorm(10) %>% round(2)
+```
+
+.sample-question[
+Suppose 10 means from a simulated sampling distribution is stored in a vector called `means`.
+```{r}
+means
+```
+What is the value of the first mean?
+]
+--
+<br>
+.pull-left[
+.sample-answer[
+```{r error=TRUE}
+mean[1]
+```
+]
+]
+--
+.pull-right[
+```{r echo=FALSE, out.width="70%", fig.align="right"}
+knitr::include_graphics("illustrations/student.png")
+```
+]
+
+---
+
+## Nudging
+
+.hand-blue[Not all feedback is useful, at least not for beginners...]
+
+<br>
+
+Providing helpful feedback can help them nudge them towards success:
+
+```{r eval=FALSE}
+mean[1]
+```
+
+.todo[Figure out why width isn't working below, want messages to be wrapped.]
+
+```{r echo=FALSE}
+options(width=500)
+ui_oops("`mean` is a function and a function doesn't have elements that can be subsetted with square brackets.")
+ui_info("`means` is the vector of sample means calculated earlier.")
 ```
 
 ---
 
-class: center, middle
+.sample-question[
+Visualise the relationship between city and highway mileage of cars from the `mpg` dataset, conditional on year of manufacture.
+]
 
-# Automated feedback in learnr
-
-(Mine Çetinkaya-Rundel)
+--
+<br>
+.sample-answer[
+There is a strong, positive, linear relationship between the city and highway mileage of cars. Year does not seem to be related to either variable.
+```{r message=FALSE, fig.height=2.5, fig.width=9, dpi=300, out.width="60%"}
+ggplot(mpg,aes(x = hwy, y = cty, fill=year)) +geom_point()+geom_smooth()
+```
+]
 
 ---
 
-class: center, middle
+class: middle
 
-# Automated feedback via GitHub Actions
-
-(Mine Çetinkaya-Rundel)
+.pull-left[
+.sample-feedback[
+- You mention a linear relationship, however your plot uses a loess fit to visualise the relationship between city and highway mileage. Also, the plot displays the uncertainty around the fit, but you haven't addressed it in your narrative.
+- Year should be mapped to the `color` aesthetic, not `fill`. 
+- Plot styling: Use informative axis labels, noting units of measurement. Also, give an informative title to your plot.
+- Code styling: Use consistent spacing around operators (e.g ` = `) and line breaks after `+` in each layer of your ggplot.
+]
+]
+.pull-right[
+```{r echo=FALSE, out.width="80%", fig.align="center"}
+knitr::include_graphics("illustrations/teacher.png")
+```
+]
 
 ---
 
-class: center, middle
 
-# Automated feedback in Jupyter
-(Tiffany Timbers)
+## Scaling
+
+.hand-blue[Our courses are growing, and that's a good thing, right?]
+
+--
+
+- Such a simple question, so much feedback to give!
+
+- Students turning in their work as R Markdown documents makes collecting submissions including code and narrative straightforward.
+
+- Providing feedback on both the code and narrative is not scalable unless (human) resources dedicated to your course grow proportionally with enrolments.
+
+---
+
+class: middle, inverse
+
+# Automated feedback in R
+
+---
+
+class: middle
+
+## learnr / gradethis
+
+---
+
+class: middle
+
+## R Markdown / GitHub Actions
+
+---
+
+class: middle, inverse
+
+# Automated feedback in Python
 
 ---
 
@@ -104,13 +229,13 @@ class: center, middle
 
 ---
 
-class: center, middle
+class: middle
 
-# Demo!
+## Demo!
 
 ---
 
-class: center, middle
+class: middle, inverse
 
 # Closing thoughts
 
