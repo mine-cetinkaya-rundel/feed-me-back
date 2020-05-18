@@ -30,54 +30,40 @@ test_2.3 <- function(){
 print("Success!")
     }
 
-# +
-test_7.3.1 <- function(){
-    test_that('marathon_filtered has the incorrect number of rows', {
-        expect_equal(digest(nrow(marathon_filtered)), 'd9509be2b148230926a2df0f355c16b2') # we hid the answer to the test here so you can't see it, but we can still run the test
+test_2.4 <- function(){
+    test_that('race_times has the incorrect number of rows', {
+        expect_equal(digest(nrow(race_times_to_plot)), '85572d175d6021278247e399a635781e') # we hid the answer to the test here so you can't see it, but we can still run the test
         })
-    test_that('marathon_filtered has the incorrect number of column', {
-        expect_equal(digest(ncol(marathon_filtered)), 'dd4ad37ee474732a009111e3456e7ed7') # we hid the answer to the test here so you can't see it, but we can still run the test   
+    test_that('race_times has the incorrect number of columns', {
+        expect_equal(digest(ncol(race_times_to_plot)), '11946e7a3ed5e1776e81c0f0ecd383d0') # we hid the answer to the test here so you can't see it, but we can still run the test   
+        })
+    test_that('race_times has the wrong columns', {
+        expect_equal(digest(paste0(sort(colnames(race_times_to_plot)), collapse = "")), '8838402ec440400a953812a0dfe57f63') # we hid the answer to the test here so you can't see it, but we can still run the test   
         })
     test_that('marathon_filtered bmi column contains the incorrect values', {
-        expect_equal(colnames(marathon_filtered), c("age", "bmi", "km5_time_seconds", "km10_time_seconds", "sex"))
-        expect_equal(digest(as.numeric(sum(marathon_filtered$bmi))), '206ea048affbda5298ce20573b9cb321') # we hid the answer to the test here so you can't see it, but we can still run the test
+        expect_equal(digest(as.numeric(sum(race_times_to_plot$bmi))), 'ef0659ac202f6a9089d16b71432c5242') # we hid the answer to the test here so you can't see it, but we can still run the test
         })
 print("Success!")
     }
 
-test_7.4.1 <- function(){
-    test_that('marathon_male has the incorrect number of rows', {
-        expect_equal(digest(nrow(marathon_male)), 'd9509be2b148230926a2df0f355c16b2') # we hid the answer to the test here so you can't see it, but we can still run the test
+test_2.5 <- function(){
+    test_that('Did not create a plot named race_times_plot', {
+        expect_true(exists("race_times_plot")) 
         })
-    test_that('marathon_male has the incorrect number of columns', {
-        expect_equal(digest(ncol(marathon_male)), 'c01f179e4b57ab8bd9de309e6d576c48') # we hid the answer to the test here so you can't see it, but we can still run the test  
+    test_that('bmi should be on the x-axis.', {
+        expect_that("bmi" %in% c(rlang::get_expr(race_times_plot$mapping$x),rlang::get_expr(race_times_plot$layers[[1]]$mapping$x)), is_true())
         })
-    test_that('marathon_male bmi and/or km10_time_seconds column(s) contains the incorrect values', {
-        expect_equal(digest(sum(marathon_male$bmi)), '206ea048affbda5298ce20573b9cb321') # we hid the answer to the test here so you can't see it, but we can still run the test
-        expect_equal(digest(sum(as.numeric(marathon_male$km10_time_seconds))), '9c9393e1464352cd4fbea94dfadfa02a') # we hid the answer to the test here so you can't see it, but we can still run the test
+    test_that('km5_time_minutes should be on the y-axis.', {
+        expect_that("km5_time_minutes" %in% c(rlang::get_expr(race_times_plot$mapping$y), rlang::get_expr(race_times_plot$layers[[1]]$mapping$y)) , is_true())
         })
-print("Success!")
-    }
-
-test_7.5.1 <- function(){
-    test_that('marathon_minutes has the incorrect number of rows', {
-        expect_equal(digest(nrow(marathon_minutes)), 'd9509be2b148230926a2df0f355c16b2') # we hid the answer to the test here so you can't see it, but we can still run the test
+    test_that('race_times_plot should be a scatter plot.', {
+        expect_that("GeomPoint" %in% c(class(race_times_plot$layers[[1]]$geom)) , is_true())
         })
-    test_that('marathon_minutes has the incorrect number of columns', {
-        expect_equal(digest(ncol(marathon_minutes)), '11946e7a3ed5e1776e81c0f0ecd383d0') # we hid the answer to the test here so you can't see it, but we can still run the test  
+    test_that('Labels on the axes should be descriptive and human readable.', {
+        expect_that((race_times_plot$labels$y) == 'bmi', is_false())
+        expect_that((race_times_plot$labels$x) == 'km5_time_minutes', is_false())
         })
-    test_that('km10_time_minutes column does not exist contains incorrect values', {
-        expect_equal(digest(sum(marathon_minutes$km10_time_minutes)), '9c9393e1464352cd4fbea94dfadfa02a') # we hid the answer to the test here so you can't see it, but we can still run the test
-        })
-print("Success!")
-    }
-# -
-
-test_2.4 <- function(){
-    test_that('Solution is incorrect', {
-        expect_match(digest(answer7.4.2), "a9cf135185e7fe4ae642c8dcb228cd2d")    
-        })
-print("Success!")
+    print("Success!")
     }
 
 test_2.6 <- function(){
