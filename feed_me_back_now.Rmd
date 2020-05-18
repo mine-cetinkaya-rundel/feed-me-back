@@ -15,14 +15,59 @@ output:
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
+# color inspiration: pantone 2020 colors
+# https://store.pantone.com/uk/en/color-of-the-year-2020-palette-exploration
 style_duo_accent(
   primary_color = "#0F4C81",   # pantone classic blue
-  secondary_color = "#7A8387", # pantone monument
+  secondary_color = "#DBCCBE", # pantone pink tint
+  black_color = "#7A8387",     # pantone monument
+  text_color = "#2A2A35",      # pantone night sky
   header_font_google = google_font("Arvo"),
   text_font_google   = google_font("Montserrat", "300", "300i"),
   code_font_google   = google_font("Source Code Pro")
 )
 ```
+
+```{r load-packages, include=FALSE}
+library(tidyverse)
+```
+
+## Outline
+
+[TODO: WE CAN REMOVE THIS SLIDE, ADDING FOR NOW TO KEEP TRACK]
+
+- Automated feedback: what, why, and how?
+- Automated feedback in R:
+  - **learnr** tutorials, feedback with **gradethis**
+  - R Markdown documents, feedback with GitHub Actions
+- Automated feedback in Python
+  - ???
+- Closing thoughts
+  - Best practices
+  - Getting started
+  - Resources
+
+---
+
+class: middle, inverse
+
+# Automated feedback: what, why, and how?
+
+---
+
+class: center, middle
+
+## Why automated feedback?
+
+---
+
+## Code checking
+
+```{r error = TRUE}
+x + 2
+```
+
+---
 
 class: center, middle
 
