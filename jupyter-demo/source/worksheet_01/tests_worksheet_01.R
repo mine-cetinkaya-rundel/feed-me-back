@@ -2,8 +2,11 @@ library(testthat)
 library(digest)
 
 test_2.1 <- function(){
-    test_that('Solution is incorrect, the tidyverse package needs to be loaded. Try doing this with the library function.', {
-        expect_that("package:tidyverse" %in% search() , is_true())
+    test_that('Solution is incorrect, the dplyr package needs to be loaded. Try doing this with the library function.', {
+        expect_that("package:dplyr" %in% search() , is_true())
+        })
+    test_that('Solution is incorrect, the ggplot2 package needs to be loaded. Try doing this with the library function.', {
+        expect_that("package:ggplot2" %in% search() , is_true())
         })
 print("Success!")
     }
