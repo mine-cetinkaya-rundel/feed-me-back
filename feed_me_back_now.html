@@ -1,56 +1,73 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
   <head>
     <title>Feed me back now:</title>
     <meta charset="utf-8" />
     <meta name="author" content="Mine Çetinkaya-Rundel &amp; Tiffany Timbers" />
-    <script src="libs/header-attrs-2.1/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
 # Feed me back now:
-## Tales of automated feedback in R and Python
+## Tales of automated feedback <br> in R and Python
 ### Mine Çetinkaya-Rundel &amp; Tiffany Timbers
-### 2020/05/20 (updated: 2020-05-13)
+### 2020/05/20 (updated: 2020-05-18) <br> TODO: INSERT LINK TO SLIDES
 
 ---
+
+
 
 
 class: center, middle
 
-# Automated feedback in R Markdown
+# Automated feedback in learnr
 
 (Mine Çetinkaya-Rundel)
 
 ---
-class: inverse, center, middle
+
+class: center, middle
+
+# Automated feedback via GitHub Actions
+
+(Mine Çetinkaya-Rundel)
+
+---
+
+class: center, middle
 
 # Automated feedback in Jupyter
 (Tiffany Timbers)
----
-
-# What is Jupyter?
 
 ---
 
-# Tests as automated feedback
+## What is Jupyter?
 
 ---
 
-# Autograding via nbgrader
+## Tests as automated feedback
 
 ---
-class: inverse, center, middle
+
+## Autograding via nbgrader
+
+---
+
+class: center, middle
 
 # Demo!
 
 ---
 
-# Best practices for automated feedback
+class: center, middle
+
+# Closing thoughts
+
+---
+
+## Best practices for automated feedback
 
 - Measure twice, cut once (verify the correctness of your tests).
 
@@ -66,7 +83,7 @@ class: inverse, center, middle
 
 ---
 
-# Resources
+## Resources
 
 - [nbgrader docs](https://nbgrader.readthedocs.io/en/stable/) (autograding in Jupyter notebooks)
     </textarea>
@@ -116,6 +133,32 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -133,17 +176,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {

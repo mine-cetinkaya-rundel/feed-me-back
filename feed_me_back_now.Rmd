@@ -1,10 +1,11 @@
 ---
 title: "Feed me back now:"
-subtitle: "Tales of automated feedback in R and Python"
+subtitle: "Tales of automated feedback <br> in R and Python"
 author: "Mine Çetinkaya-Rundel & Tiffany Timbers"
-date: "2020/05/20 (updated: `r Sys.Date()`)"
+date: "2020/05/20 (updated: `r Sys.Date()`) <br> TODO: INSERT LINK TO SLIDES"
 output:
   xaringan::moon_reader:
+    css: xaringan-themer.css
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -12,37 +13,65 @@ output:
       countIncrementalSlides: false
 ---
 
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#0F4C81",   # pantone classic blue
+  secondary_color = "#7A8387", # pantone monument
+  header_font_google = google_font("Arvo"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Source Code Pro")
+)
+```
+
 class: center, middle
 
-# Automated feedback in R Markdown
+# Automated feedback in learnr
 
 (Mine Çetinkaya-Rundel)
 
 ---
-class: inverse, center, middle
+
+class: center, middle
+
+# Automated feedback via GitHub Actions
+
+(Mine Çetinkaya-Rundel)
+
+---
+
+class: center, middle
 
 # Automated feedback in Jupyter
 (Tiffany Timbers)
----
-
-# What is Jupyter?
 
 ---
 
-# Tests as automated feedback
+## What is Jupyter?
 
 ---
 
-# Autograding via nbgrader
+## Tests as automated feedback
 
 ---
-class: inverse, center, middle
+
+## Autograding via nbgrader
+
+---
+
+class: center, middle
 
 # Demo!
 
 ---
 
-# Best practices for automated feedback
+class: center, middle
+
+# Closing thoughts
+
+---
+
+## Best practices for automated feedback
 
 - Measure twice, cut once (verify the correctness of your tests).
 
@@ -58,6 +87,6 @@ class: inverse, center, middle
 
 ---
 
-# Resources
+## Resources
 
 - [nbgrader docs](https://nbgrader.readthedocs.io/en/stable/) (autograding in Jupyter notebooks)
