@@ -52,7 +52,7 @@
   --inverse-background-color: #DBCCBE;
   --inverse-header-color: #7A8387;
   --title-slide-background-color: #0F4C81;
-  --title-slide-text-color: #FFFFFF;
+  --title-slide-text-color: #0F4C81;
   --header-background-color: #0F4C81;
   --header-background-text-color: #FFFFFF;
   --primary: #0F4C81;
@@ -133,6 +133,8 @@ a, a > code {
 }
 .title-slide {
   background-color: var(--title-slide-background-color);
+  background-image: url("illustrations/robots.jpeg");
+  background-size: cover;
 }
 .title-slide .remark-slide-number {
   display: none;

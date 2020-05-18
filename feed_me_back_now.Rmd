@@ -32,7 +32,9 @@ style_duo_accent(
   text_color = "#2A2A35",      # pantone night sky
   header_font_google = google_font("Arvo"),
   text_font_google   = google_font("Montserrat", "300", "300i"),
-  code_font_google   = google_font("Source Code Pro")
+  code_font_google   = google_font("Source Code Pro"),
+  title_slide_background_image = "illustrations/robots.jpeg",
+  title_slide_text_color = "#0F4C81"
 )
 ```
 
@@ -91,8 +93,6 @@ up efficiency of grading faster than (human) resources
 
 ---
 
-.todo[fix two column formatting]
-
 ```{r include=FALSE}
 set.seed(1234)
 means <- rnorm(10) %>% round(2)
@@ -135,10 +135,7 @@ Providing helpful feedback can help them nudge them towards success:
 mean[1]
 ```
 
-.todo[Figure out why width isn't working below, want messages to be wrapped.]
-
 ```{r echo=FALSE}
-options(width=500)
 ui_oops("`mean` is a function and a function doesn't have elements that can be subsetted with square brackets.")
 ui_info("`means` is the vector of sample means calculated earlier.")
 ```
@@ -153,7 +150,7 @@ Visualise the relationship between city and highway mileage of cars from the `mp
 <br>
 .sample-answer[
 There is a strong, positive, linear relationship between the city and highway mileage of cars. Year does not seem to be related to either variable.
-```{r message=FALSE, fig.height=2.5, fig.width=9, dpi=300, out.width="60%"}
+```{r message=FALSE, fig.height=2.5, fig.width=9, dpi=300, out.width="70%"}
 ggplot(mpg,aes(x = hwy, y = cty, fill=year)) +geom_point()+geom_smooth()
 ```
 ]
@@ -185,9 +182,9 @@ knitr::include_graphics("illustrations/teacher.png")
 
 --
 
-- Such a simple question, so much feedback to give!
-
 - Students turning in their work as R Markdown documents makes collecting submissions including code and narrative straightforward.
+
+--
 
 - Providing feedback on both the code and narrative is not scalable unless (human) resources dedicated to your course grow proportionally with enrolments.
 
