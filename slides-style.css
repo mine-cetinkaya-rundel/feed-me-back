@@ -81,3 +81,16 @@
   font-weight: bold;
   color: var(--monument);
 }
+
+/* Unequal width two column layout */
+.pull-left-wide {
+  float: left;
+  width: 67%;
+}
+.pull-right-narrow {
+  float: right;
+  width: 27%;
+}
+.pull-right ~ * {
+  clear: both;
+}

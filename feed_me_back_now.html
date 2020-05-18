@@ -93,7 +93,7 @@ What is the value of the first mean?
 ]
 --
 &lt;br&gt;
-.pull-left[
+.pull-left-wide[
 .sample-answer[
 
 ```r
@@ -106,8 +106,8 @@ mean[1]
 ]
 ]
 --
-.pull-right[
-&lt;img src="illustrations/student.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+.pull-right-narrow[
+&lt;img src="illustrations/student.png" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]
 
 ---
@@ -158,7 +158,7 @@ ggplot(mpg,aes(x = hwy, y = cty, fill=year)) +geom_point()+geom_smooth()
 
 class: middle
 
-.pull-left[
+.pull-left-wide[
 .sample-feedback[
 - You mention a linear relationship, however your plot uses a loess fit to visualise the relationship between city and highway mileage. Also, the plot displays the uncertainty around the fit, but you haven't addressed it in your narrative.
 - Year should be mapped to the `color` aesthetic, not `fill`. 
@@ -166,8 +166,8 @@ class: middle
 - Code styling: Use consistent spacing around operators (e.g ` = `) and line breaks after `+` in each layer of your ggplot.
 ]
 ]
-.pull-right[
-&lt;img src="illustrations/teacher.png" width="80%" style="display: block; margin: auto;" /&gt;
+.pull-right-narrow[
+&lt;img src="illustrations/teacher.png" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
