@@ -1,0 +1,83 @@
+/* Custom fonts */
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand|Handlee&display=swap');
+
+/* colors */
+/* From: https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2020-palette-exploration */
+
+:root {
+  --classic-blue: #0F4C81;
+  --provence: #638CC7;
+  --baby-blue: #B6CADA;
+  --baby-blue-30: #B6CADA30;
+  --monument: #7A8387;
+  --monument-30: #7A838730;
+  --stucco: #A58D7F;
+  --peach-quartz: #F5B895;
+  --peach-quartz-30: #F5B89530;
+  --cornhusk: #F4DBB3;
+  --cornhusk-30: #F4DBB330;
+}
+
+/* Font sizes */
+.huge { font-size: 400% }
+.larger { font-size: 280% }
+.large { font-size: 130% }
+.midi { font-size: 85% }
+.small { font-size: 70% }
+.xsmall { font-size: 60% }
+.xxsmall { font-size: 55% }
+.tiny { font-size: 50% }
+
+/* Custom text formatting */
+
+.todo { 
+  color: red; 
+  font-weight: bold;
+  background-color: yellow;
+}
+
+.hand{
+  font-family: 'Gochi Hand', cursive;
+  font-size: 125%;
+}
+
+.hand-blue{
+  font-family: 'Gochi Hand', cursive;
+  color: var(--classic-blue);
+  font-size: 125%;
+}
+
+/* Custom boxes */
+.sample-question, .sample-answer, .sample-feedback {
+  padding: 2px 2px;
+}
+.sample-question{
+  border-left: solid 5px var(--baby-blue);
+  background-color: var(--baby-blue-30);
+}
+.sample-question:before{
+  content: "Sample question:";
+  font-size: 100%;
+  font-weight: bold;
+  color: var(--monument);
+}
+.sample-answer {
+  border-left: solid 5px var(--cornhusk);
+  background-color: var(--cornhusk-30);
+}
+.sample-answer:before{
+  content: "Sample answer:";
+  font-size: 100%;
+  font-weight: bold;
+  color: var(--monument);
+}
+.sample-feedback {
+  border-left: solid 5px var(--monument);
+  background-color: var(--monument-30);
+}
+.sample-feedback:before{
+  content: "Sample feedback:";
+  font-size: 100%;
+  font-weight: bold;
+  color: var(--monument);
+}
