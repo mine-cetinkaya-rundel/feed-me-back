@@ -377,8 +377,8 @@ c.ClearSolutions.begin_solution_delimeter = 'BEGIN SOLUTION'
 
 ## The code snippet that will replace code solutions
 c.ClearSolutions.code_stub = {
-    "R": "# your code here",
-    "python": "# your code here"
+    "R": "",
+    "python": ""
 }
 
 ## The delimiter marking the end of a solution
