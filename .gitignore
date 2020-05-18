@@ -4,3 +4,4 @@
 **.Ruserdata
 **gradebook.db
 *.key
+.Rproj.user
