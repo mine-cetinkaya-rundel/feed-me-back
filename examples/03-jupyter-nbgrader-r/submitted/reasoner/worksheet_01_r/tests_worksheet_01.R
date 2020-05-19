@@ -8,6 +8,12 @@ test_2.1 <- function(){
     test_that('Solution is incorrect, the ggplot2 package needs to be loaded. Try doing this with the library function.', {
         expect_that("package:ggplot2" %in% search() , is_true())
         })
+    test_that('Solution is incorrect, the readr package needs to be loaded. Try doing this with the library function.', {
+        expect_that("package:readr" %in% search() , is_true())
+        })
+    test_that('Solution is incorrect, the tidyr package needs to be loaded. Try doing this with the library function.', {
+        expect_that("package:tidyr" %in% search() , is_true())
+        })
 print("Success!")
     }
 
@@ -63,8 +69,8 @@ test_2.5 <- function(){
         expect_that("GeomPoint" %in% c(class(race_times_plot$layers[[1]]$geom)) , is_true())
         })
     test_that('Labels on the axes should be descriptive and human readable.', {
-        expect_that((race_times_plot$labels$y) == 'bmi', is_false())
-        expect_that((race_times_plot$labels$x) == 'km5_time_minutes', is_false())
+        expect_that((race_times_plot$labels$x) == 'bmi', is_false())
+        expect_that((race_times_plot$labels$y) == 'km5_time_minutes', is_false())
         })
     print("Success!")
     }

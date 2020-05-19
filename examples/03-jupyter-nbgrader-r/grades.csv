@@ -1,0 +1,4 @@
+assignment,duedate,timestamp,student_id,last_name,first_name,email,raw_score,late_submission_penalty,score,max_score
+worksheet_01_r,,,bitdiddle,Bitdiddle,Ben,,3.0,0.0,3.0,6.0
+worksheet_01_r,,,hacker,Hacker,Alyssa,,5.0,0.0,5.0,6.0
+worksheet_01_r,,,reasoner,Reasoner,Louis,,6.0,0.0,6.0,6.0
