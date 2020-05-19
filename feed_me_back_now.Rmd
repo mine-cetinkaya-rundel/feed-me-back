@@ -19,8 +19,6 @@ output:
         </div>
 ---
 
-
-
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
 # color inspiration: pantone 2020 colors
@@ -32,7 +30,9 @@ style_duo_accent(
   text_color = "#2A2A35",      # pantone night sky
   header_font_google = google_font("Arvo"),
   text_font_google   = google_font("Montserrat", "300", "300i"),
-  code_font_google   = google_font("Source Code Pro")
+  code_font_google   = google_font("Source Code Pro"),
+  title_slide_background_image = "illustrations/robots-cover.jpeg",
+  title_slide_text_color = "#0F4C81"
 )
 ```
 
@@ -41,36 +41,26 @@ library(tidyverse)
 library(usethis)
 ```
 
-## Outline
+## Assumed background
 
-.todo[WE SHOULD EITHER REMOVE THIS SLIDE OR SIMPLIFY AND PRESENT IT WITH A BETTER VISUAL THAN A BULLETED LIST, LEAVING HERE NOW JUST SO WE CAN KEEP TRACK]
-
-- Section: `# middle, inverse` Automated feedback: what, why, and how?
-  - Slides...
-- Section: `# middle, inverse` Automated feedback in R:
-  - Subsection: `## middle` **learnr** tutorials, feedback with **gradethis**
-    - Slides...
-  - Subsection: `## middle` R Markdown documents, feedback with GitHub Actions
-    - Slides...
-- Section: `# middle, inverse` Automated feedback in Python
-  - Subsection: ???
-- Section: `# middle, inverse` Closing thoughts
-  - Slide: Best practices
-  - Slide: Getting started
-  - Slide: Resources
+```{r echo=FALSE, fig.align="center", out.width="30%"}
+knitr::include_graphics("illustrations/robots-background.png")
+```
 
 ---
 
+background-image: url(illustrations/robots-what-why.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
 class: middle, inverse
 
 # Automated feedback: 
-# why and how?
+# what and why?
 
 ---
 
-## The why
-
-.todo[There is probably better phrasing, keep thinking...]
+## The what and the why
 
 --
 .pull-left[
@@ -91,8 +81,6 @@ up efficiency of grading faster than (human) resources
 
 ---
 
-.todo[fix two column formatting]
-
 ```{r include=FALSE}
 set.seed(1234)
 means <- rnorm(10) %>% round(2)
@@ -107,7 +95,7 @@ What is the value of the first mean?
 ]
 --
 <br>
-.pull-left[
+.pull-left-wide[
 .sample-answer[
 ```{r error=TRUE}
 mean[1]
@@ -115,8 +103,8 @@ mean[1]
 ]
 ]
 --
-.pull-right[
-```{r echo=FALSE, out.width="70%", fig.align="right"}
+.pull-right-narrow[
+```{r echo=FALSE, fig.align="right"}
 knitr::include_graphics("illustrations/student.png")
 ```
 ]
@@ -135,10 +123,7 @@ Providing helpful feedback can help them nudge them towards success:
 mean[1]
 ```
 
-.todo[Figure out why width isn't working below, want messages to be wrapped.]
-
 ```{r echo=FALSE}
-options(width=500)
 ui_oops("`mean` is a function and a function doesn't have elements that can be subsetted with square brackets.")
 ui_info("`means` is the vector of sample means calculated earlier.")
 ```
@@ -153,7 +138,7 @@ Visualise the relationship between city and highway mileage of cars from the `mp
 <br>
 .sample-answer[
 There is a strong, positive, linear relationship between the city and highway mileage of cars. Year does not seem to be related to either variable.
-```{r message=FALSE, fig.height=2.5, fig.width=9, dpi=300, out.width="60%"}
+```{r message=FALSE, fig.height=2.5, fig.width=9, dpi=300, out.width="70%"}
 ggplot(mpg,aes(x = hwy, y = cty, fill=year)) +geom_point()+geom_smooth()
 ```
 ]
@@ -162,7 +147,7 @@ ggplot(mpg,aes(x = hwy, y = cty, fill=year)) +geom_point()+geom_smooth()
 
 class: middle
 
-.pull-left[
+.pull-left-wide[
 .sample-feedback[
 - You mention a linear relationship, however your plot uses a loess fit to visualise the relationship between city and highway mileage. Also, the plot displays the uncertainty around the fit, but you haven't addressed it in your narrative.
 - Year should be mapped to the `color` aesthetic, not `fill`. 
@@ -170,14 +155,13 @@ class: middle
 - Code styling: Use consistent spacing around operators (e.g ` = `) and line breaks after `+` in each layer of your ggplot.
 ]
 ]
-.pull-right[
-```{r echo=FALSE, out.width="80%", fig.align="center"}
+.pull-right-narrow[
+```{r echo=FALSE, fig.align="center"}
 knitr::include_graphics("illustrations/teacher.png")
 ```
 ]
 
 ---
-
 
 ## Scaling
 
@@ -185,35 +169,53 @@ knitr::include_graphics("illustrations/teacher.png")
 
 --
 
-- Such a simple question, so much feedback to give!
-
 - Students turning in their work as R Markdown documents makes collecting submissions including code and narrative straightforward.
+
+--
 
 - Providing feedback on both the code and narrative is not scalable unless (human) resources dedicated to your course grow proportionally with enrolments.
 
 ---
 
+background-image: url(illustrations/robots-options.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
 class: middle, inverse
 
-# Automated feedback in R
+# Options for 
+# automated feedback
+# in R and Python
 
 ---
 
+background-image: url(illustrations/robot-r.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
 class: middle
 
 ## learnr / gradethis
 
 ---
 
+background-image: url(illustrations/robot-r.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
 class: middle
 
 ## R Markdown / GitHub Actions
 
 ---
 
-class: middle, inverse
+background-image: url(illustrations/robot-r-python.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
+class: middle
 
-# Automated feedback in Python
+## Jupyter / nbgrader
 
 ---
 
@@ -229,6 +231,10 @@ class: middle, inverse
 
 ---
 
+background-image: url(illustrations/robots-demo.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
 class: middle
 
 ## Demo!
@@ -260,3 +266,13 @@ class: middle, inverse
 ## Resources
 
 - [nbgrader docs](https://nbgrader.readthedocs.io/en/stable/) (autograding in Jupyter notebooks)
+
+---
+
+background-image: url(illustrations/robots-last.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
+class: middle, inverse
+
+.todo[last slide, link, info, etc.]
