@@ -19,8 +19,6 @@ output:
         </div>
 ---
 
-
-
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
 # color inspiration: pantone 2020 colors
@@ -42,6 +40,14 @@ style_duo_accent(
 library(tidyverse)
 library(usethis)
 ```
+
+## Assumed background
+
+```{r echo=FALSE, fig.align="center", out.width="30%"}
+knitr::include_graphics("illustrations/robots-background.png")
+```
+
+---
 
 background-image: url(illustrations/robots-what-why.jpeg)
 background-position: center
