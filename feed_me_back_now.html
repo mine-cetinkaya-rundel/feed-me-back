@@ -14,7 +14,7 @@ class: center, middle, inverse, title-slide
 # Feed me back now:
 ## Tales of automated feedback <br> in R and Python
 ### Mine Çetinkaya-Rundel &amp; Tiffany Timbers
-### 2020/05/20 (updated: 2020-05-18) <br> .todo[INSERT LINK TO SLIDES]
+### 2020/05/20 (updated: 2020-05-19) <br> .todo[INSERT LINK TO SLIDES]
 
 ---
 
@@ -23,38 +23,27 @@ class: center, middle, inverse, title-slide
 
 
 
+---
 
+## Assumed background
 
-## Outline
+&lt;img src="illustrations/robots-background.png" width="30%" style="display: block; margin: auto;" /&gt;
 
-.todo[WE SHOULD EITHER REMOVE THIS SLIDE OR SIMPLIFY AND PRESENT IT WITH A BETTER VISUAL THAN A BULLETED LIST, LEAVING HERE NOW JUST SO WE CAN KEEP TRACK]
-
-- Section: `# middle, inverse` Automated feedback: what, why, and how?
-  - Slides...
-- Section: `# middle, inverse` Automated feedback in R:
-  - Subsection: `## middle` **learnr** tutorials, feedback with **gradethis**
-    - Slides...
-  - Subsection: `## middle` R Markdown documents, feedback with GitHub Actions
-    - Slides...
-- Section: `# middle, inverse` Automated feedback in Python
-  - Subsection: ???
-- Section: `# middle, inverse` Closing thoughts
-  - Slide: Best practices
-  - Slide: Getting started
-  - Slide: Resources
 
 ---
 
+background-image: url(illustrations/robots-what-why.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
 class: middle, inverse
 
 # Automated feedback: 
-# why and how?
+# what and why?
 
 ---
 
-## The why
-
-.todo[There is probably better phrasing, keep thinking...]
+## The what and the why
 
 --
 .pull-left[
@@ -75,8 +64,6 @@ up efficiency of grading faster than (human) resources
 
 ---
 
-.todo[fix two column formatting]
-
 
 
 .sample-question[
@@ -93,7 +80,7 @@ What is the value of the first mean?
 ]
 --
 &lt;br&gt;
-.pull-left[
+.pull-left-wide[
 .sample-answer[
 
 ```r
@@ -106,8 +93,8 @@ mean[1]
 ]
 ]
 --
-.pull-right[
-&lt;img src="illustrations/student.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+.pull-right-narrow[
+&lt;img src="illustrations/student.png" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]
 
 ---
@@ -124,8 +111,6 @@ Providing helpful feedback can help them nudge them towards success:
 ```r
 mean[1]
 ```
-
-.todo[Figure out why width isn't working below, want messages to be wrapped.]
 
 
 ```
@@ -151,14 +136,14 @@ There is a strong, positive, linear relationship between the city and highway mi
 ggplot(mpg,aes(x = hwy, y = cty, fill=year)) +geom_point()+geom_smooth()
 ```
 
-&lt;img src="feed_me_back_now_files/figure-html/unnamed-chunk-7-1.png" width="60%" /&gt;
+&lt;img src="feed_me_back_now_files/figure-html/unnamed-chunk-8-1.png" width="70%" /&gt;
 ]
 
 ---
 
 class: middle
 
-.pull-left[
+.pull-left-wide[
 .sample-feedback[
 - You mention a linear relationship, however your plot uses a loess fit to visualise the relationship between city and highway mileage. Also, the plot displays the uncertainty around the fit, but you haven't addressed it in your narrative.
 - Year should be mapped to the `color` aesthetic, not `fill`. 
@@ -166,12 +151,11 @@ class: middle
 - Code styling: Use consistent spacing around operators (e.g ` = `) and line breaks after `+` in each layer of your ggplot.
 ]
 ]
-.pull-right[
-&lt;img src="illustrations/teacher.png" width="80%" style="display: block; margin: auto;" /&gt;
+.pull-right-narrow[
+&lt;img src="illustrations/teacher.png" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
-
 
 ## Scaling
 
@@ -179,35 +163,53 @@ class: middle
 
 --
 
-- Such a simple question, so much feedback to give!
-
 - Students turning in their work as R Markdown documents makes collecting submissions including code and narrative straightforward.
+
+--
 
 - Providing feedback on both the code and narrative is not scalable unless (human) resources dedicated to your course grow proportionally with enrolments.
 
 ---
 
+background-image: url(illustrations/robots-options.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
 class: middle, inverse
 
-# Automated feedback in R
+# Options for 
+# automated feedback
+# in R and Python
 
 ---
 
+background-image: url(illustrations/robot-r.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
 class: middle
 
 ## learnr / gradethis
 
 ---
 
+background-image: url(illustrations/robot-r.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
 class: middle
 
 ## R Markdown / GitHub Actions
 
 ---
 
-class: middle, inverse
+background-image: url(illustrations/robot-r-python.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
+class: middle
 
-# Automated feedback in Python
+## Jupyter / nbgrader
 
 ---
 
@@ -223,6 +225,10 @@ class: middle, inverse
 
 ---
 
+background-image: url(illustrations/robots-demo.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
 class: middle
 
 ## Demo!
@@ -254,6 +260,16 @@ class: middle, inverse
 ## Resources
 
 - [nbgrader docs](https://nbgrader.readthedocs.io/en/stable/) (autograding in Jupyter notebooks)
+
+---
+
+background-image: url(illustrations/robots-last.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
+class: middle, inverse
+
+.todo[last slide, link, info, etc.]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
