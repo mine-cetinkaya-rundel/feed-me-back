@@ -5,3 +5,4 @@
 **gradebook.db
 *.key
 .Rproj.user
+**.pyc
