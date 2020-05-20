@@ -285,13 +285,50 @@ class: middle
 
 ## What is Jupyter?
 
+
+.pull-left[
+```{r echo=FALSE, fig.align="center", out.width="150%"}
+knitr::include_graphics("illustrations/jupyter-r.png")
+```
+]
+--
+.pull-right[
+```{r echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("illustrations/r-python.png")
+```
+]
+
 ---
 
 ## Tests as automated feedback
 
+```{r echo=FALSE, fig.align="center", out.width="75%"}
+knitr::include_graphics("illustrations/tests-as-feeback.png")
+```
+
 ---
 
 ## Autograding via nbgrader
+
+```{r echo=FALSE, fig.align="center", out.width="75%"}
+knitr::include_graphics("illustrations/grading.png")
+```
+
+---
+
+## Autograding via nbgrader
+
+.pull-left[
+```{r echo=FALSE, fig.align="center", out.width="130%"}
+knitr::include_graphics("illustrations/feedback-forms.png")
+```
+]
+--
+.pull-right[
+```{r echo=FALSE, fig.align="center", out.width="130%"}
+knitr::include_graphics("illustrations/feedback-forms2.png")
+```
+]
 
 ---
 
@@ -313,17 +350,29 @@ class: middle, inverse
 
 ## Best practices for automated feedback
 
-- Measure twice, cut once (verify the correctness of your tests).
+--
 
-- Use rounding & type coercion to write robust tests.
+- Measure twice, cut once (verify the correctness of your tests). 📏📏 ✂️
 
-- Use hashing to hide solutions for visible tests.
+--
 
-- Test your tests on the students compute environment.
+- Use rounding & type coercion to write robust tests. 💪
 
-- Abstract your tests to a script that is sourced/imported into the students literate code document.
+--
 
-- Don't give automated feedback on everything.
+- Use hashing to hide solutions for visible tests. 🕵️
+
+--
+
+- Test your tests on the students compute environment. 💻
+
+--
+
+- Abstract your tests to a script that is sourced/imported into the students literate code document. 📁
+
+--
+
+- Don't give automated feedback on everything. 🙈
 
 ---
 
@@ -335,6 +384,10 @@ class: middle, inverse
 - [gradethis](https://rstudio-education.github.io/gradethis/) package documentation
 
 - [nbgrader docs](https://nbgrader.readthedocs.io/en/stable/) (autograding in Jupyter notebooks)
+
+- [examples of R Jupyter notebooks with automated feedback from UBC's DSCI 100 course](https://github.com/UBC-DSCI/dsci-100-assets/tree/master/2019-spring/materials)
+
+- [examples of Python Jupyter notebooks with automated feedback from Berkley's data8 course](https://github.com/UBC-DSCI/dsci-100-assets/tree/master/2019-spring/materials)
 
 ---
 

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
     <title>Feed me back now:</title>
     <meta charset="utf-8" />
     <meta name="author" content="Mine Çetinkaya-Rundel &amp; Tiffany Timbers" />
+    <script src="libs/header-attrs-2.1/header-attrs.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="slides-style.css" type="text/css" />
   </head>
@@ -25,7 +26,11 @@ class: center, middle, inverse, title-slide
 
 ## Assumed background
 
+<<<<<<< HEAD
+&lt;img src="illustrations/robots-background.png" width="30%" style="display: block; margin: auto;" /&gt;
+=======
 &lt;img src="images/robots-background.png" width="30%" style="display: block; margin: auto;" /&gt;
+>>>>>>> upstream/master
 
 ---
 
@@ -91,7 +96,11 @@ mean[1]
 ]
 --
 .pull-right-narrow[
+<<<<<<< HEAD
+&lt;img src="illustrations/student.png" width="853" style="display: block; margin: auto 0 auto auto;" /&gt;
+=======
 &lt;img src="images/student.png" style="display: block; margin: auto 0 auto auto;" /&gt;
+>>>>>>> upstream/master
 ]
 
 ---
@@ -111,7 +120,7 @@ mean[1]
 
 
 ```
-## x `mean` is a function and a function doesn't have elements that can be subsetted with square brackets.
+## ✖ `mean` is a function and a function doesn't have elements that can be subsetted with square brackets.
 ```
 
 ```
@@ -149,7 +158,11 @@ class: middle
 ]
 ]
 .pull-right-narrow[
+<<<<<<< HEAD
+&lt;img src="illustrations/teacher.png" width="883" style="display: block; margin: auto;" /&gt;
+=======
 &lt;img src="images/teacher.png" style="display: block; margin: auto;" /&gt;
+>>>>>>> upstream/master
 ]
 
 ---
@@ -276,13 +289,38 @@ class: middle
 
 ## What is Jupyter?
 
+
+.pull-left[
+&lt;img src="illustrations/jupyter-r.png" width="150%" style="display: block; margin: auto;" /&gt;
+]
+--
+.pull-right[
+&lt;img src="illustrations/r-python.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
 ---
 
 ## Tests as automated feedback
 
+&lt;img src="illustrations/tests-as-feeback.png" width="75%" style="display: block; margin: auto;" /&gt;
+
 ---
 
 ## Autograding via nbgrader
+
+&lt;img src="illustrations/grading.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Autograding via nbgrader
+
+.pull-left[
+&lt;img src="illustrations/feedback-forms.png" width="130%" style="display: block; margin: auto;" /&gt;
+]
+--
+.pull-right[
+&lt;img src="illustrations/feedback-forms2.png" width="130%" style="display: block; margin: auto;" /&gt;
+]
 
 ---
 
@@ -304,17 +342,29 @@ class: middle, inverse
 
 ## Best practices for automated feedback
 
-- Measure twice, cut once (verify the correctness of your tests).
+--
 
-- Use rounding &amp; type coercion to write robust tests.
+- Measure twice, cut once (verify the correctness of your tests). 📏📏 ✂️
 
-- Use hashing to hide solutions for visible tests.
+--
 
-- Test your tests on the students compute environment.
+- Use rounding &amp; type coercion to write robust tests. 💪
 
-- Abstract your tests to a script that is sourced/imported into the students literate code document.
+--
 
-- Don't give automated feedback on everything.
+- Use hashing to hide solutions for visible tests. 🕵️
+
+--
+
+- Test your tests on the students compute environment. 💻
+
+--
+
+- Abstract your tests to a script that is sourced/imported into the students literate code document. 📁
+
+--
+
+- Don't give automated feedback on everything. 🙈
 
 ---
 
@@ -326,6 +376,10 @@ class: middle, inverse
 - [gradethis](https://rstudio-education.github.io/gradethis/) package documentation
 
 - [nbgrader docs](https://nbgrader.readthedocs.io/en/stable/) (autograding in Jupyter notebooks)
+
+- [examples of R Jupyter notebooks with automated feedback from UBC's DSCI 100 course](https://github.com/UBC-DSCI/dsci-100-assets/tree/master/2019-spring/materials)
+
+- [examples of Python Jupyter notebooks with automated feedback from Berkley's data8 course](https://github.com/UBC-DSCI/dsci-100-assets/tree/master/2019-spring/materials)
 
 ---
 
@@ -385,32 +439,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
-(function() {
-  "use strict"
-  // Replace <script> tags in slides area to make them executable
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    var scriptAttrs = scripts[i].attributes;
-    for (var j = 0; j < scriptAttrs.length; j++) {
-      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
-    }
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-})();
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -428,6 +456,17 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
 
 <script>
 slideshow._releaseMath = function(el) {
