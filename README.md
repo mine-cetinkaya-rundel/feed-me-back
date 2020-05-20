@@ -1,4 +1,4 @@
-# Feed me back now: Tales of automated feedback in R and Python
+# Feed me back now: Tales of automated feedback in R and Python <img src='images/robots-for-readme.png' align="right" height="300" />
 
 Mine Çetinkaya-Rundel (University of Edinburgh, Duke University, RStudio) & Tiffany Timbers (UBC)
 
