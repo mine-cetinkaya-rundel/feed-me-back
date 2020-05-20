@@ -318,6 +318,14 @@ knitr::include_graphics("images/grading.png")
 
 ## Autograding via nbgrader
 
+```{r echo=FALSE, fig.align="center", out.width="75%"}
+knitr::include_graphics("images/grades_as_csv.png")
+```
+
+---
+
+## Autograding via nbgrader
+
 .pull-left[
 ```{r echo=FALSE, fig.align="center", out.width="130%"}
 knitr::include_graphics("images/feedback-forms.png")
@@ -338,7 +346,25 @@ background-repeat: no-repeat
 background-size: contain
 class: middle
 
-## Demo!
+## Demo: Jupyter + nbgrader with R
+
+[**`[R notebook]`**](https://mybinder.org/v2/gh/ttimbers/jupyter-demo/master?filepath=jupyter-nbgrader-r%2Frelease%2Fworksheet_01_r%2Fworksheet_01_r.ipynb) 
+
+[**`[R code]`**](https://github.com/mine-cetinkaya-rundel/feed-me-back/tree/master/examples/03-jupyter-nbgrader-r)
+
+---
+
+background-image: url(images/robots-demo.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
+class: middle
+
+## Demo: Jupyter + nbgrader with Python
+
+[**`[Python notebook]`**](https://mybinder.org/v2/gh/ttimbers/jupyter-demo/master?filepath=jupyter-nbgrader-python%2Frelease%2Fworksheet_01_python%2Fworksheet_01_python.ipynb) 
+
+[**`[Python code]`**](https://github.com/mine-cetinkaya-rundel/feed-me-back/tree/master/examples/04-jupyter-nbgrader-python)
 
 ---
 
@@ -387,7 +413,7 @@ class: middle, inverse
 
 - [examples of R Jupyter notebooks with automated feedback from UBC's DSCI 100 course](https://github.com/UBC-DSCI/dsci-100-assets/tree/master/2019-spring/materials)
 
-- [examples of Python Jupyter notebooks with automated feedback from Berkley's data8 course](https://github.com/UBC-DSCI/dsci-100-assets/tree/master/2019-spring/materials)
+- [examples of Python Jupyter notebooks with automated feedback from Berkley's data8 course](https://github.com/data-8/data8assets/tree/gh-pages/materials/su17/lab)
 
 ---
 
