@@ -303,7 +303,7 @@ knitr::include_graphics("images/r-python.png")
 ## Tests as automated feedback
 
 ```{r echo=FALSE, fig.align="center", out.width="75%"}
-knitr::include_graphics("images/tests-as-feeback.png")
+knitr::include_graphics("images/tests-as-feedback.png")
 ```
 
 ---
