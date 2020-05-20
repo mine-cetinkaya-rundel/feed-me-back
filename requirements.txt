@@ -1,0 +1,6 @@
+altair==4.0.1
+pandas==1.0.1
+numpy==1.18.1
+vega==3.4.0
+vega-datasets==0.8.0
+notebook==6.0.3
