@@ -133,7 +133,7 @@ a, a > code {
 }
 .title-slide {
   background-color: var(--title-slide-background-color);
-  background-image: url("illustrations/robots-cover.jpeg");
+  background-image: url("images/robots-cover.jpeg");
   background-size: cover;
 }
 .title-slide .remark-slide-number {
