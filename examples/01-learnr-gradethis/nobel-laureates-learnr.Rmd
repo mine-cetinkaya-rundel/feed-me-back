@@ -50,9 +50,7 @@ their visualizations as well as explore new questions.
 ### Packages
 
 We'll use the **tidyverse** package for this analysis. Run the following code 
-to load this package. Remember that it will report back to you with messaging 
-about the versions of tidyverse packages it loads and any conflicts with 
-function names in base packages.
+to load this package.
 
 ```{r load-packages, exercise=TRUE}
 library(tidyverse)
@@ -60,7 +58,8 @@ library(tidyverse)
 
 ## Data
 
-The dataset for this assignment can be found as a csv file at https://bit.ly/nobel-laureates. You can read it in directly using the `read_csv()` function.
+The dataset for this assignment can be found as a csv file at https://bit.ly/nobel-laureates. 
+You can read it in directly using the `read_csv()` function.
 
 ```{r load-data, exercise=TRUE}
 nobel <- read_csv("https://bit.ly/nobel-laureates")
@@ -151,7 +150,7 @@ nobel_living <- nobel %>%
 ```
 
 ```{r nobel-filter-check}
-grade_code("Well done!")
+grade_code("You've successfully filtered the data.")
 ```
 
 ### Check your results
@@ -174,7 +173,7 @@ nobel_living <- nobel %>%
 
 ```{r nobel-living-nrow-check}
 grade_result(
-  pass_if(~ identical(.result, 228L), "Great job! There are 228 nobel laureates that fit the criteria."),
+  pass_if(~ identical(.result, 228L), "There are 228 nobel laureates that fit the criteria."),
   fail_if(~ identical(.result, 26L), "Each row represents a nobel laureate. Did you calculate the number of columns instead of rows?"),
   fail_if(~ TRUE, "Not quite. Each row represents a nobel laureate. Try calculating the number of rows.")
 )
