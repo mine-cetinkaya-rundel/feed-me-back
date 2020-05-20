@@ -6,7 +6,7 @@ There are 3 different ways you can interact with this demo:
 
 2. [See a student-like experience via a notebook with persistant storage (Google authentication required)](https://cybera.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fttimbers%2Fjupyter-demo&branch=master&urlpath=tree%2Fjupyter-demo%2Fjupyter-nbgrader-r%2Frelease%2Fworksheet_01_r%2Fworksheet_01_r.ipynb)
 
-3. [See an instructor-like experience via a local install of all the required software](#installation-instructions-for-all software-required-for-the-demo)
+3. [See an instructor-like experience via a local install of all the required software](#installation-instructions-for-all-software-required-for-the-demo)
 
 ## Installation instructions for all software required for the demo
 
