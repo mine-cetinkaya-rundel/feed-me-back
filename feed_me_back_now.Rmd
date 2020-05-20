@@ -31,7 +31,7 @@ style_duo_accent(
   header_font_google = google_font("Arvo"),
   text_font_google   = google_font("Montserrat", "300", "300i"),
   code_font_google   = google_font("Source Code Pro"),
-  title_slide_background_image = "illustrations/robots-cover.jpeg",
+  title_slide_background_image = "images/robots-cover.jpeg",
   title_slide_text_color = "#0F4C81"
 )
 ```
@@ -44,12 +44,12 @@ library(usethis)
 ## Assumed background
 
 ```{r echo=FALSE, fig.align="center", out.width="30%"}
-knitr::include_graphics("illustrations/robots-background.png")
+knitr::include_graphics("images/robots-background.png")
 ```
 
 ---
 
-background-image: url(illustrations/robots-what-why.jpeg)
+background-image: url(images/robots-what-why.jpeg)
 background-position: center
 background-repeat: no-repeat
 background-size: contain
@@ -105,7 +105,7 @@ mean[1]
 --
 .pull-right-narrow[
 ```{r echo=FALSE, fig.align="right"}
-knitr::include_graphics("illustrations/student.png")
+knitr::include_graphics("images/student.png")
 ```
 ]
 
@@ -157,7 +157,7 @@ class: middle
 ]
 .pull-right-narrow[
 ```{r echo=FALSE, fig.align="center"}
-knitr::include_graphics("illustrations/teacher.png")
+knitr::include_graphics("images/teacher.png")
 ```
 ]
 
@@ -177,7 +177,7 @@ knitr::include_graphics("illustrations/teacher.png")
 
 ---
 
-background-image: url(illustrations/robots-options.jpeg)
+background-image: url(images/robots-options.jpeg)
 background-position: center
 background-repeat: no-repeat
 background-size: contain
@@ -189,7 +189,7 @@ class: middle, inverse
 
 ---
 
-background-image: url(illustrations/robot-r.jpeg)
+background-image: url(images/robot-r.jpeg)
 background-position: center
 background-repeat: no-repeat
 background-size: contain
@@ -199,7 +199,71 @@ class: middle
 
 ---
 
-background-image: url(illustrations/robot-r.jpeg)
+## learnr
+
+- **learnr** is an R package that makes it easy to create interactive tutorials from R Markdown documents.
+
+- Tutorials can include:
+  - Narrative, figures, illustrations, and equations
+  - Code exercises (R code chunks that users can edit and execute directly)
+  - Multiple choice questions
+  - Videos (YouTube, Vimeo)
+  - Interactive Shiny components
+
+---
+
+background-image: url(images/learnr-first-look.png)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
+class: middle
+
+---
+
+## gradethis
+
+Companion to the learnr package, **gradethis** provides multiple methods to grade learnr exercises:
+
+- `grade_code()`: Grade code against a solution
+- `grade_conditions()`: Grade all specified conditions
+- `grade_result()`: Grade result of exercise code
+
+---
+
+background-image: url(images/robots-demo.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
+class: middle
+
+## Demo: learnr / gradethis
+
+[**`[tutorial]`**](https://minecr.shinyapps.io/nobel-laureates-learnr) 
+
+[**`[code]`**](https://github.com/mine-cetinkaya-rundel/feed-me-back/blob/master/examples/01-learnr-gradethis/nobel-laureates-learnr.Rmd)
+
+---
+
+## FAQ for learnr and gradethis
+
+--
+
+**Q: What is the best way to get started?**
+
+Start with exercise code chunks for developing analysis and multiple choice 
+questions for assessment. [[example]](https://minecr.shinyapps.io/08-modeling-multiple/)
+
+--
+
+**Q: Is it possible to record student data?**
+
+Yes, though not trivial, at this point. See [**submitter**](https://github.com/dtkaplan/submitr) by Danny Kaplan.
+
+A solution that is "good enough" for formative exercises: embed a Google/Microsoft/etc. Form at the end and ask students to "sign in" their work.
+
+---
+
+background-image: url(images/robot-r.jpeg)
 background-position: center
 background-repeat: no-repeat
 background-size: contain
@@ -209,7 +273,7 @@ class: middle
 
 ---
 
-background-image: url(illustrations/robot-r-python.jpeg)
+background-image: url(images/robot-r-python.jpeg)
 background-position: center
 background-repeat: no-repeat
 background-size: contain
@@ -231,7 +295,7 @@ class: middle
 
 ---
 
-background-image: url(illustrations/robots-demo.jpeg)
+background-image: url(images/robots-demo.jpeg)
 background-position: center
 background-repeat: no-repeat
 background-size: contain
@@ -265,11 +329,16 @@ class: middle, inverse
 
 ## Resources
 
+- learnr:
+  - [learnr](https://rstudio.github.io/learnr) package documentation
+  - CAUSE Webinar: [Interactive R tutorials with learnr](https://www.causeweb.org/cause/webinar/teaching/2018-05) (May 2018)
+- [gradethis](https://rstudio-education.github.io/gradethis/) package documentation
+
 - [nbgrader docs](https://nbgrader.readthedocs.io/en/stable/) (autograding in Jupyter notebooks)
 
 ---
 
-background-image: url(illustrations/robots-last.jpeg)
+background-image: url(images/robots-last.jpeg)
 background-position: center
 background-repeat: no-repeat
 background-size: contain
