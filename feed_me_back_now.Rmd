@@ -288,13 +288,13 @@ class: middle
 
 .pull-left[
 ```{r echo=FALSE, fig.align="center", out.width="150%"}
-knitr::include_graphics("illustrations/jupyter-r.png")
+knitr::include_graphics("images/jupyter-r.png")
 ```
 ]
 --
 .pull-right[
 ```{r echo=FALSE, fig.align="center", out.width="100%"}
-knitr::include_graphics("illustrations/r-python.png")
+knitr::include_graphics("images/r-python.png")
 ```
 ]
 
@@ -303,7 +303,7 @@ knitr::include_graphics("illustrations/r-python.png")
 ## Tests as automated feedback
 
 ```{r echo=FALSE, fig.align="center", out.width="75%"}
-knitr::include_graphics("illustrations/tests-as-feeback.png")
+knitr::include_graphics("images/tests-as-feeback.png")
 ```
 
 ---
@@ -311,7 +311,7 @@ knitr::include_graphics("illustrations/tests-as-feeback.png")
 ## Autograding via nbgrader
 
 ```{r echo=FALSE, fig.align="center", out.width="75%"}
-knitr::include_graphics("illustrations/grading.png")
+knitr::include_graphics("images/grading.png")
 ```
 
 ---
@@ -320,13 +320,13 @@ knitr::include_graphics("illustrations/grading.png")
 
 .pull-left[
 ```{r echo=FALSE, fig.align="center", out.width="130%"}
-knitr::include_graphics("illustrations/feedback-forms.png")
+knitr::include_graphics("images/feedback-forms.png")
 ```
 ]
 --
 .pull-right[
 ```{r echo=FALSE, fig.align="center", out.width="130%"}
-knitr::include_graphics("illustrations/feedback-forms2.png")
+knitr::include_graphics("images/feedback-forms2.png")
 ```
 ]
 
