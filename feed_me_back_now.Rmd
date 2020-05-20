@@ -245,60 +245,6 @@ class: middle
 
 ---
 
-background-image: url(images/robots-faq.jpeg)
-background-position: center
-background-repeat: no-repeat
-background-size: contain
-
-## FAQ: learnr / gradethis
-
----
-
-.large[
-.hand-blue[Q: What is an approachable way to get started?]
-]
-
-Build a tutorial where students build develop their analysis in exercise code 
-chunks (that are not checked) and only multiple choice questions are used for 
-assessment. [**`[example]`**](https://minecr.shinyapps.io/04-wrangleviz)
-
-```{r echo=FALSE, out.width="85%", fig.align="center"}
-knitr::include_graphics("images/learnr-simple.png")
-```
-
----
-
-.large[
-.hand-blue[Q: Is it possible to record student data?]
-]
-
-Yes, though not trivial, at this point. See [recording events](https://rstudio.github.io/learnr/publishing.html#Recording_Events) section on the learnr documentation and the [**submitter**](https://github.com/dtkaplan/submitr) package by Danny Kaplan.
-
-A solution that may be "good enough" for formative exercises: embed a 
-Google/Microsoft/etc. Form at the end and ask students to "sign in" their work.
-**Tip:** Add a free-text question to this form where students reflect on the 
-exercises they just completed, and you can easily capture and analyze. [**`[example]`**](https://minecr.shinyapps.io/04-wrangleviz/#section-finish-up)
-
-```{r echo=FALSE, out.width="60%", fig.align="center"}
-knitr::include_graphics("images/learnr-logging.png")
-```
-
----
-
-.large[
-.hand-blue[Q: I've built simple tutorials already. How do I make the jump to code checking and providing automated feedback that is actually useful?]
-]
-
-- Replicate `gradethis::gradethis_demo()`, then make incremental changes
-- Read the [Testing](https://r-pkgs.org/tests.html#test-tests) chapter in R Packages (Wickham and Bryan) 
-- Also read the [Metaprogramming](https://adv-r.hadley.nz/metaprogramming.html) section in Advanced R (Wickham)
-
-```{r echo=FALSE, out.width="75%", fig.align="center"}
-knitr::include_graphics("images/learnr-learn-more.jpeg")
-```
-
----
-
 background-image: url(images/robot-r.jpeg)
 background-position: center
 background-repeat: no-repeat
@@ -364,43 +310,6 @@ class: middle
 [**`[repo]`**](https://github.com/ghclass-demo/nobel-laureates) 
 
 [**`[actions]`**](https://github.com/ghclass-demo/nobel-laureates/tree/master/.github/workflows)
-
----
-
-background-image: url(images/robots-faq.jpeg)
-background-position: center
-background-repeat: no-repeat
-background-size: contain
-
-## FAQ: R Markdown / GitHub Actions
-
----
-
-.large[
-.hand-blue[Q: How can I get started with having my students use Git and GitHub to manage and collaborate on their work?]
-]
-
-- Read the [get started](https://rundel.github.io/ghclass/articles/ghclass.html) guide on the **ghclass** package website
-- Test out [ghclass](https://rundel.github.io/ghclass/index.html), an R package for managing a GitHub class organisation
-
-```{r echo=FALSE, out.width="85%", fig.align="center"}
-knitr::include_graphics("images/ghclass.png")
-```
-
----
-
-.large[
-.hand-blue[Q: Can I see more GitHub actions in action?]
-]
-
-.pull-left[
-We're collecting examples of GitHub actions useful for checking data science assignments at [github.com/rundel/ghclass-actions](https://github.com/rundel/ghclass-actions).
-]
-.pull-right[
-```{r echo=FALSE, fig.align="center"}
-knitr::include_graphics("images/ghclass-actions.png")
-```
-]
 
 ---
 
@@ -534,6 +443,97 @@ class: middle, inverse
 --
 
 - Consider peer feedback where automated feedback is not feasible (e.g. interpretation, narrative) but scalability is an issue 👯
+
+---
+
+background-image: url(images/robots-faq.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
+
+## FAQ: learnr / gradethis
+
+---
+
+.large[
+.hand-blue[Q: What is an approachable way to get started?]
+]
+
+Build a tutorial where students build develop their analysis in exercise code 
+chunks (that are not checked) and only multiple choice questions are used for 
+assessment. [**`[example]`**](https://minecr.shinyapps.io/04-wrangleviz)
+
+```{r echo=FALSE, out.width="85%", fig.align="center"}
+knitr::include_graphics("images/learnr-simple.png")
+```
+
+---
+
+.large[
+.hand-blue[Q: Is it possible to record student data?]
+]
+
+Yes, though not trivial, at this point. See [recording events](https://rstudio.github.io/learnr/publishing.html#Recording_Events) section on the learnr documentation and the [**submitter**](https://github.com/dtkaplan/submitr) package by Danny Kaplan.
+
+A solution that may be "good enough" for formative exercises: embed a 
+Google/Microsoft/etc. Form at the end and ask students to "sign in" their work.
+**Tip:** Add a free-text question to this form where students reflect on the 
+exercises they just completed, and you can easily capture and analyze. [**`[example]`**](https://minecr.shinyapps.io/04-wrangleviz/#section-finish-up)
+
+```{r echo=FALSE, out.width="60%", fig.align="center"}
+knitr::include_graphics("images/learnr-logging.png")
+```
+
+---
+
+.large[
+.hand-blue[Q: I've built simple tutorials already. How do I make the jump to code checking and providing automated feedback that is actually useful?]
+]
+
+- Replicate `gradethis::gradethis_demo()`, then make incremental changes
+- Read the [Testing](https://r-pkgs.org/tests.html#test-tests) chapter in R Packages (Wickham and Bryan) 
+- Also read the [Metaprogramming](https://adv-r.hadley.nz/metaprogramming.html) section in Advanced R (Wickham)
+
+```{r echo=FALSE, out.width="75%", fig.align="center"}
+knitr::include_graphics("images/learnr-learn-more.jpeg")
+```
+
+---
+
+background-image: url(images/robots-faq.jpeg)
+background-position: center
+background-repeat: no-repeat
+background-size: contain
+
+## FAQ: R Markdown / GitHub Actions
+
+---
+
+.large[
+.hand-blue[Q: How can I get started with having my students use Git and GitHub to manage and collaborate on their work?]
+]
+
+- Read the [get started](https://rundel.github.io/ghclass/articles/ghclass.html) guide on the **ghclass** package website
+- Test out [ghclass](https://rundel.github.io/ghclass/index.html), an R package for managing a GitHub class organisation
+
+```{r echo=FALSE, out.width="85%", fig.align="center"}
+knitr::include_graphics("images/ghclass.png")
+```
+
+---
+
+.large[
+.hand-blue[Q: Can I see more GitHub actions in action?]
+]
+
+.pull-left[
+We're collecting examples of GitHub actions useful for checking data science assignments at [github.com/rundel/ghclass-actions](https://github.com/rundel/ghclass-actions).
+]
+.pull-right[
+```{r echo=FALSE, fig.align="center"}
+knitr::include_graphics("images/ghclass-actions.png")
+```
+]
 
 ---
 
