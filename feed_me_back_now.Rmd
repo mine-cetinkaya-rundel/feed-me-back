@@ -2,7 +2,7 @@
 title: "Feed me back now:"
 subtitle: "Tales of automated feedback <br> in R and Python"
 author: "Mine Çetinkaya-Rundel & Tiffany Timbers"
-date: "eCOTS 2020 / 2020-05-20 <br> .todo[INSERT LINK TO SLIDES]"
+date: "eCOTS 2020 / 2020-05-20 <br><br> `r emo::ji('link')` [bit.ly/feed-me-back](https://bit.ly/feed-me-back)"
 output:
   xaringan::moon_reader:
     css: [xaringan-themer.css, slides-style.css]
@@ -509,27 +509,31 @@ class: middle, inverse
 
 --
 
-- Measure twice, cut once (verify the correctness of your tests). 📏📏 ✂️
+- Measure twice, cut once (verify the correctness of your tests) 📏📏 ✂️
 
 --
 
-- Use rounding & type coercion to write robust tests. 💪
+- Use rounding & type coercion to write robust tests 💪
 
 --
 
-- Use hashing to hide solutions for visible tests. 🕵️
+- Use hashing to hide solutions for visible tests 🕵️
 
 --
 
-- Test your tests on the students compute environment. 💻
+- Test your tests on the students compute environment 💻
 
 --
 
-- Abstract your tests to a script that is sourced/imported into the students literate code document. 📁
+- Abstract your tests to a script that is sourced/imported into the students literate code document 📁
 
 --
 
-- Don't give automated feedback on everything. 🙈
+- Don't give automated feedback on everything 🙈
+
+--
+
+- Consider peer feedback where automated feedback is not feasible (e.g. interpretation, narrative) but scalability is an issue 👯
 
 ---
 
@@ -557,6 +561,26 @@ background-image: url(images/robots-last.jpeg)
 background-position: center
 background-repeat: no-repeat
 background-size: contain
-class: middle, inverse
 
-.todo[last slide, link, info, etc.]
+.pull-left[
+### Mine Çetinkaya-Rundel
+.large[
+`r fontawesome::fa(name = "envelope", fill = "#0F4C81")` cetinkaya.mine@gmail.com  
+`r fontawesome::fa(name = "twitter", fill = "#0F4C81")` minebocek 
+`r fontawesome::fa(name = "github", fill = "#0F4C81")` mine-cetinkaya-rundel  
+]
+]
+.pull-right[
+## Tiffany Timbers
+.large[
+`r fontawesome::fa(name = "envelope", fill = "#0F4C81")` tiffany.timbers@stat.ubc.ca  
+`r fontawesome::fa(name = "twitter", fill = "#0F4C81")` TiffanyTimbers 
+`r fontawesome::fa(name = "github", fill = "#0F4C81")` ttimbers  
+] 
+]
+
+<br><br>
+
+.center[
+## `r emo::ji('link')` [bit.ly/feed-me-back](https://bit.ly/feed-me-back)
+]                 
